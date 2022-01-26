@@ -9,3 +9,13 @@ CREATE TABLE movies (
   title TEXT NOT NULL, 
   company TEXT NOT NULL
 );
+
+DROP TABLE IF EXISTS funkos;
+
+CREATE TABLE funkos (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  name TEXT NOT NULL, 
+  association TEXT NOT NULL, 
+  hair TEXT NOT NULL
+);
+

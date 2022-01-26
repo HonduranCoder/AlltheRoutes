@@ -25,6 +25,7 @@ describe('backend routes', () => {
       title: 'Encanto',
     });
   });
+
   it('should get a movie by id', async () => {
     const movie = await Movie.insert({
       company: 'Disney',
@@ -33,6 +34,7 @@ describe('backend routes', () => {
     const res = await request(app).get('/api/v1/movies/1');
     expect(res.body).toEqual(movie);
   });
+
   it('should list all of the movies', async () => {
     const movie4 = await Movie.insert({
       company: 'DreamWorks',
@@ -59,6 +61,7 @@ describe('backend routes', () => {
       company: 'Disney',
     });
   });
+
   it('should delete a movie by id', async () => {
     const noMovie = await Movie.insert({
       company: 'ReelFX',
